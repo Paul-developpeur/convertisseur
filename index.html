@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id='app'>
+        <header>
+            <h1>Convertisseur</h1>
+            <ul>
+                <router-link to='/'>
+                    <li>Convertion</li>
+                </router-link>
+                <router-link to='/about'>
+                    <li>à propos</li>
+                </router-link>
+            </ul>
+        </header>
+        <router-view></router-view>
+    </div>
+
+    <script type='text/x-template' id='convertion'>
+        <div class='container'>
+            <h2>Convertire Celcius en Fahenight</h2>
+            <input type="number" id='fan' name='fan' value=''>
+            <button id='btn' onclick='Conv()'>Convertire</button>
+            <p id='r'></p>
+        </div>
+    </script>
+
+    <script type='text/x-template' id='about'>
+        <div>
+            <p>Hello</p>
+        </div>
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src='https://unpkg.com/vue-router/dist/vue-router.js'></script>
+    <script src='app.js'></script>
+    <script src='conv.js'></script>
+</body>
+
+</html>
