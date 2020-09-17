@@ -10,7 +10,38 @@
 
 <body>
 
-   
+   <div id="app">
+       <h1>Convertisseur</h1>
+       <ul>
+           <router-link to='/degres'>
+                <li>Convertisseur de degrès</li>
+           </router-link>
+           <router-link to='/greatness'>
+                <li>Convertisseur des grandeurs</li>
+           </router-link>
+       </ul>
+       <router-view></router-view>
+   </div>
+
+   <script type='text/x-template' id='degres'>
+        <div>
+            <h2>Convertisseur Celcius en Fahenight</h2>
+            <input type="NUMBER" id='celcius'>
+            <button id='btnC' onclick='Celcius()'>Convertire</button>
+            <p id='a'></p>
+
+            <h2>Convertisseur Fahenight en Celcius</h2>
+            <input type="number">
+            <button>Convertire</button>
+            <p id='b'></p>
+        </div>
+   </script>
+
+   <script type='text/w-template' id='greatness'>
+        <div>
+            <p>Coucou</p>
+        </div>
+   </script>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src='https://unpkg.com/vue-router/dist/vue-router.js'></script>
